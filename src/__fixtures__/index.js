@@ -1,5 +1,7 @@
-import docs from './docs';
+import docsDB from './docs/docs';
+import fooDB from './foo/db';
 
 export default {
-  'docs.json': docs
+  '/docs/docs.json': docsDB,
+  '/foo/db.json': fooDB
 };

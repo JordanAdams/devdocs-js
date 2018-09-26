@@ -45,7 +45,6 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "lodash.uniq": "^4.5.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5"
   }
