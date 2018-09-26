@@ -1,5 +1,5 @@
+import path from 'path';
 import nock from 'nock';
-import fixtures from './__fixtures__';
 import {
   getAvailableDocs,
   getDocsForSlug,
@@ -7,10 +7,13 @@ import {
   getMetadataForSlug
 } from './client';
 
+const fixture = fixturePath =>
+  path.resolve(__dirname, '__fixtures__', fixturePath);
+
 it('should get available documentation', () => {
   nock('https://devdocs.io')
     .get('/docs/docs.json')
-    .reply(200, fixtures['/docs/docs.json']);
+    .replyWithFile(200, fixture('docs/docs.json'));
 
   const expected = [
     {
@@ -48,7 +51,7 @@ it('should get available documentation', () => {
 it('should get documentation for a slug', () => {
   nock('https://docs.devdocs.io')
     .get('/foo/db.json')
-    .reply(200, fixtures['/foo/db.json']);
+    .replyWithFile(200, fixture('foo/db.json'));
 
   return getDocsForSlug('foo').then(docs => {
     expect(docs).toEqual({
@@ -61,7 +64,7 @@ it('should get documentation for a slug', () => {
 it('should get the index for a slug', () => {
   nock('https://docs.devdocs.io')
     .get('/foo/index.json')
-    .reply(200, fixtures['/foo/index.json']);
+    .replyWithFile(200, fixture('foo/index.json'));
 
   return getIndexForSlug('foo').then(index => {
     expect(index).toEqual({
@@ -96,7 +99,7 @@ it('should get the index for a slug', () => {
 it('should get metadata for a slug', () => {
   nock('https://docs.devdocs.io')
     .get('/foo/meta.json')
-    .reply(200, fixtures['/foo/meta.json']);
+    .replyWithFile(200, fixture('foo/meta.json'));
 
   return getMetadataForSlug('foo').then(metadata => {
     expect(metadata).toEqual({

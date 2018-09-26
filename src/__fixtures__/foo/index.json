@@ -1,4 +1,4 @@
-export default `{
+{
   "entries": [
     {
       "name":"0. The Application Shell",
@@ -23,4 +23,4 @@ export default `{
         "slug":"forms"
       }
     ]
-}`;
+}

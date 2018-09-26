@@ -1,4 +1,4 @@
-export default `[
+[
   {
     "name": "Angular",
     "slug": "angular",
@@ -24,4 +24,4 @@ export default `[
     "mtime": 1528679925,
     "db_size": 828139
   }
-]`;
+]
