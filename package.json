@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js .",
     "hooks:pre-commit": "yarn lint && yarn test"
   },
-  "keywords": [],
+  "keywords": ["devdocs", "api", "api-client"],
   "author": "Jordan Adams <hi@jordanadams.co.uk>",
   "license": "ISC",
   "repository": {
