@@ -3,7 +3,6 @@ module.exports = api => {
 
   return {
     plugins: [],
-    presets: [['@babel/env', { modules: 'commonjs' }]],
-    ignore: ['**/__fixtures__//*', '**/*.spec.js', '/node_modules/']
+    presets: [['@babel/env', { modules: 'commonjs' }]]
   };
 };
