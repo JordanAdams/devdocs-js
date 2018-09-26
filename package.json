@@ -6,7 +6,7 @@
   "scripts": {
     "build": "yarn build:clean && yarn build:js",
     "build:clean": "rimraf dist",
-    "build:js": "babel src --out-dir dist",
+    "build:js": "NODE_ENV=production babel src --out-dir dist",
     "test": "jest",
     "test:watch": "jest --watch --onlyChanged",
     "lint": "eslint --ext .js .",
