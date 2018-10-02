@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "jest --watch --onlyChanged",
     "lint": "eslint --ext .js .",
-    "hooks:pre-commit": "yarn lint && yarn test"
+    "hooks:pre-commit": "yarn lint && yarn test",
+    "prepublish": "yarn build"
   },
   "engines": {
     "node": ">= 6"
