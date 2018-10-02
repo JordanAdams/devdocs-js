@@ -7,3 +7,5 @@ jest.config.js
 .editorconfig
 .eslintignore
 .eslintrc.js
+.travis.yml
+CONTRIBUTING.md
