@@ -2,7 +2,7 @@
   "name": "devdocs-client",
   "version": "0.1.0",
   "description": "A client for the DevDocs JSON API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "yarn build:clean && yarn build:js",
     "build:clean": "rimraf dist",
